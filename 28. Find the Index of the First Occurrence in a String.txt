@@ -1,0 +1,14 @@
+ int strStr(string haystack, string needle) {
+        int n1 =needle.size(), n2 = haystack.size();
+        if(n1 == 0) return 0;
+        for(int i=0;i <n2;i++){
+            
+            for(int j=0;j< n1;j++){
+                if(haystack[i+j] != needle[j]) break;
+                if(j == n1 -1) return i;
+                
+               }
+        }
+        return -1;
+        
+    }
